@@ -15,6 +15,14 @@ mkdir -p "${BUNDLE}/Contents/Resources"
 cp ".build/release/${APP_NAME}" "${BUNDLE}/Contents/MacOS/"
 cp "Info.plist" "${BUNDLE}/Contents/"
 
+# Generate icon if not already built
+if [ ! -f "AppIcon.icns" ]; then
+    echo "▸ Generating app icon…"
+    swift make_icon.swift
+    iconutil -c icns AppIcon.iconset -o AppIcon.icns
+fi
+cp "AppIcon.icns" "${BUNDLE}/Contents/Resources/"
+
 # Remove quarantine so it runs without Gatekeeper prompts (local build)
 xattr -cr "${BUNDLE}" 2>/dev/null || true
 

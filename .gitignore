@@ -18,6 +18,9 @@ DerivedData/
 # App bundle (built artifact)
 *.app/
 
+# Generated icon intermediates (AppIcon.icns is kept; the PNG set is not)
+AppIcon.iconset/
+
 # macOS
 .DS_Store
 .AppleDouble
