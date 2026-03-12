@@ -15,6 +15,12 @@ A lightweight macOS menu bar app that displays multiple clocks for different tim
 - **Persistent** — all settings saved in UserDefaults and restored on next launch
 - **No Dock icon** — lives entirely in the menu bar
 
+## Screenshots
+
+| Popover & Add Timezone | Popover & Settings |
+|---|---|
+| ![Popover and Add Timezone form](screenshots/popover-add.png) | ![Popover and Settings window](screenshots/popover-settings.png) |
+
 ## Requirements
 
 - macOS 14 (Sonoma) or later
@@ -37,8 +43,7 @@ swift build -c release
 mkdir -p TimezoneBar.app/Contents/MacOS
 cp .build/release/TimezoneBar TimezoneBar.app/Contents/MacOS/
 cp Info.plist TimezoneBar.app/Contents/
-
-
+cp AppIcon.icns TimezoneBar.app/Contents/Resources/
 ```
 
 ## Usage
