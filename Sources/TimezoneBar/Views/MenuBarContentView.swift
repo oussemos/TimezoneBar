@@ -3,6 +3,7 @@ import SwiftUI
 struct MenuBarContentView: View {
     @EnvironmentObject var manager: ClockManager
     @Environment(\.openWindow) private var openWindow
+    @Environment(\.openSettings) private var openSettings
 
     var body: some View {
         VStack(spacing: 0) {
@@ -50,7 +51,7 @@ struct MenuBarContentView: View {
                 Spacer()
 
                 Button("Preferences…") {
-                    NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
+                    openSettings()
                     NSApp.activate(ignoringOtherApps: true)
                 }
                 .buttonStyle(.plain)

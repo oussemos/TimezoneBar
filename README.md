@@ -4,6 +4,7 @@ A lightweight macOS menu bar app that displays multiple clocks for different tim
 
 ![macOS 14+](https://img.shields.io/badge/macOS-14%2B-blue)
 ![Swift 5.9](https://img.shields.io/badge/Swift-5.9-orange)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
 
 ## Features
 
